@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:garagebook/CalendarSpace/CalendarSpace.dart';
-import 'package:garagebook/Dashboard/Dashboard.dart';
+import 'package:garagebook/TalentBoard/TalentBoard.dart';
+import 'package:garagebook/AccountBoard/AccountBoard.dart';
 import 'package:garagebook/NavigationBar/NavigationBar.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyApp()));
+  runApp(MaterialApp(
+    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class MyApp extends StatelessWidget {

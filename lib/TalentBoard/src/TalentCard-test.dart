@@ -2,33 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AccountCard extends StatefulWidget {
-  final Color color;
-  final Color progressIndicatorColor;
-  final String projectName;
-  final String percentComplete;
-  final IconData icon;
-  final String market;
+class TalentCard1 extends StatefulWidget {
+  final String name;
+  final String address;
   final String city;
   final String state;
-  final String squadManager;
-  AccountCard({
-    this.color,
-    this.progressIndicatorColor,
-    this.percentComplete,
-    this.projectName,
-    this.icon,
-    this.market,
+  final String zip;
+  final String role;
+  final String managerId;
+  // final Set<String> accountIds = Set.of();
+  TalentCard1({
+    this.name,
+    this.address,
     this.city,
     this.state,
-    this.squadManager,
+    this.zip,
+    this.role,
+    this.managerId,
   });
   @override
-  _AccountCardState createState() => _AccountCardState();
+  _TalentCard1State createState() => _TalentCard1State();
 }
 
-class _AccountCardState extends State<AccountCard> {
+class _TalentCard1State extends State<TalentCard1> {
   bool hovered = false;
+  final Color color = Colors.blueAccent;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
@@ -47,7 +45,7 @@ class _AccountCardState extends State<AccountCard> {
         height: hovered ? 160.0 : 155.0,
         width: hovered ? 200.0 : 195.0,
         decoration: BoxDecoration(
-            color: hovered ? widget.color : Colors.white,
+            color: hovered ? color : Colors.white,
             borderRadius: BorderRadius.circular(15.0),
             boxShadow: [
               BoxShadow(
@@ -71,7 +69,7 @@ class _AccountCardState extends State<AccountCard> {
                     height: 30.0,
                     width: 30.0,
                     child: Icon(
-                      widget.icon,
+                      Feather.user,
                       color: !hovered ? Colors.white : Colors.blueAccent,
                       size: 16.0,
                     ),
@@ -85,7 +83,7 @@ class _AccountCardState extends State<AccountCard> {
                   ),
                   Container(
                     child: Text(
-                      widget.projectName,
+                      "Name Name",
                       style: GoogleFonts.quicksand(
                         fontWeight: FontWeight.w500,
                         fontSize: 14.0,
